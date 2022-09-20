@@ -1,53 +1,60 @@
-
 import java.util.Scanner;
-import javax.swing.JOptionPane;
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
-class calculator{
+class calculator  {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, URISyntaxException {
 
-        // variablen
-        double num1;
-        double num2;
-        String method;
+        try {
 
-        // inputs
-        Scanner input = new Scanner(System.in);
-        System.out.println("enter the first digit:");
-        num1 = input.nextDouble();
-        System.out.println("enter the _xXcalculatingGHGXx_ method:");
-        method = input.next();
-        System.out.println("enter the second digit:");
-        num2 = input.nextDouble();
+            // variablen
+            double num1;
+            double num2;
+            String operator;
 
-        // operation
-        if (method.equals("+")) {
-            System.out.println("the result is: " + (num1 + num2));
-        }
-        if (method.equals("-")) {
-            System.out.println("the result is: " + (num1 - num2));
-        }
-        if (method.equals("*")) {
-            System.out.println("the result is: " + (num1 * num2));
-        }
-        if (method.equals("/")) {
-            if (num2 == 0) {
-                System.out.println("du bist halt so dumm");
-                System.exit(0);
+            // inputs
+            Scanner input = new Scanner(System.in);
+            System.out.println("enter the first digit:");
+            num1 = input.nextDouble();
+            System.out.println("enter the mathematical operator:");
+            operator = input.next();
+            System.out.println("enter the second digit:");
+            num2 = input.nextDouble();
+
+            // operation
+            if (operator.equals("+")) {
+                System.out.println("the result is: " + (num1 + num2));
+            } else if (operator.equals("-")) {
+                System.out.println("the result is: " + (num1 - num2));
+            } else if (operator.equals("*")) {
+                System.out.println("the result is: " + (num1 * num2));
+            } else if (operator.equals("/")) {
+                if (num2 == 0) {
+                    System.out.println("geht nicht");
+                }
+
+                else {
+                    System.out.println("the result is: " + (num1 / num2));
+                }
+            } else if (operator.equals("%")) {
+                int value1 = (int) num1;
+                int value2 = (int) num2;
+                System.out.println("the result is: " + (value1 % value2));
             }
 
             else {
-                System.out.println("the result is: " + (num1 / num2));
+                Desktop.getDesktop().browse(new URI("i think you made a critacal error with the operator"));
             }
-        }
-        if (method.equals("%")) {
-            int value1 = (int) num1;
-            int value2 = (int) num2;
-            System.out.println("the result is: " + (value1 % value2));
-        }
 
-        // thank you message
-        System.out.println("thank you for wasting your time :)");
+            // thank you message
+            System.out.println("thanks for running my code");
+
+        } catch (Exception e) {
+            System.out.println("hmmmmmmmmmmmmm something went wrong");
+        }
 
     }
 }
