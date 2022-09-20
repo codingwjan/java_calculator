@@ -1,49 +1,52 @@
-package java_calculator;
+
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
-class calculator
-{
-    public static void main(String[] args) {
+class calculator {
+    public static void main(String[] args){  
 
-        //variablen
-        int num1;
-        int num2;
+        // variablen
+        double num1;
+        double num2;
         String method;
 
-
-        //inputs
+        // inputs
         Scanner input = new Scanner(System.in);
         System.out.println("enter the first digit:");
-        num1 = input.nextInt();
-        System.out.println("enter the calculatingh method:");
+        num1 = input.nextDouble();
+        System.out.println("enter the _xXcalculatingGHGXx_ method:");
         method = input.next();
         System.out.println("enter the second digit:");
-        num2 = input.nextInt();
-        System.out.println("calculating...");
-        
+        num2 = input.nextDouble();
 
-        //calc. method
+        //operation
         if (method.equals("+")) 
         {
-            System.out.println("the result is: "+ (num1 + num2));
+            System.out.println("the result is: " + (num1 + num2));
         }
         if (method.equals("-")) 
         {
-            System.out.println("the result is: "+ (num1 - num2));
+            System.out.println("the result is: " + (num1 - num2));
         }
         if (method.equals("*")) 
         {
-            System.out.println("the result is: "+ (num1 * num2));
+            System.out.println("the result is: " + (num1 * num2));
         }
         if (method.equals("/")) 
         {
-            System.out.println("the result is: "+ (num1 / num2));
-        }
+            if (num2 == 0) 
+            {
+                System.out.println("du bist halt so dumm");
+                System.exit(0);
+            }
 
-        
-        //thank you message
-        System.out.println("thank you for using my code :)");
+            else
+            {
+            System.out.println("the result is: " + (num1 / num2));
+            }
 
+        // thank you message
+        System.out.println("thank you for wasting your time :)");
+    }
     }
 }
