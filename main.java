@@ -1,39 +1,23 @@
-<<<<<<< HEAD
 package java_calculator;
 
-=======
->>>>>>> 67c5d9bdf7b8abe5c9eaaf3b221db96859ff5848
 import java.util.Scanner;
 import java.awt.Desktop;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-<<<<<<< HEAD
-class calculator {
-
-    public static void main(String[] args) throws IOException, URISyntaxException {
-
-        try {
-            // variables
-=======
 class calculator  {
 
     public static void main(String[] args) throws IOException, URISyntaxException {
 
         try {
 
-            // variablen
->>>>>>> 67c5d9bdf7b8abe5c9eaaf3b221db96859ff5848
+            //variables
             double num1;
             double num2;
             String operator;
 
-<<<<<<< HEAD
             // input
-=======
-            // inputs
->>>>>>> 67c5d9bdf7b8abe5c9eaaf3b221db96859ff5848
             Scanner input = new Scanner(System.in);
             System.out.println("enter the first digit:");
             num1 = input.nextDouble();
@@ -42,7 +26,7 @@ class calculator  {
             System.out.println("enter the second digit:");
             num2 = input.nextDouble();
 
-            // operation
+            //operation
             if (operator.equals("+")) {
                 System.out.println("the result is: " + (num1 + num2));
             } else if (operator.equals("-")) {
@@ -51,11 +35,7 @@ class calculator  {
                 System.out.println("the result is: " + (num1 * num2));
             } else if (operator.equals("/")) {
                 if (num2 == 0) {
-<<<<<<< HEAD
-                    System.out.println("you can't devide by zero");
-=======
-                    System.out.println("geht nicht");
->>>>>>> 67c5d9bdf7b8abe5c9eaaf3b221db96859ff5848
+                    System.out.println("you can't devide by zero :(");
                 }
 
                 else {
@@ -71,12 +51,15 @@ class calculator  {
                 Desktop.getDesktop().browse(new URI("i think you made a critacal error with the operator"));
             }
 
-            // thank you message
+            //thank you message
             System.out.println("thanks for running my code");
 
         } catch (Exception e) {
-            System.out.println("hmmmmmmmmmmmmm something went wrong");
+            System.out.println("hmm something went wrong ...");
+            System.exit(0);
         }
 
     }
 }
+
+//created by ebayboy123
